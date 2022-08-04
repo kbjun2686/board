@@ -1,5 +1,7 @@
-package com.sparta.memo.domain;
+package com.sparta.memo.model;
 
+import com.sparta.memo.dto.MemoRequestDto;
+import com.sparta.memo.domain.Timestamped;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -15,14 +17,12 @@ public class Memo extends Timestamped {
     private Long id;
     @Column(nullable = false)
     private Long password;
-
     @Column(nullable = false)
     private String title;
     @Column(nullable = false)
     private String username;
     @Column(nullable = false)
     private String contents;
-
     private Boolean result;
 
 

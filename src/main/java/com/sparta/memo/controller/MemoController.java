@@ -1,9 +1,9 @@
 package com.sparta.memo.controller;
 
-import com.sparta.memo.domain.CheckPasswordDto;
-import com.sparta.memo.domain.Memo;
-import com.sparta.memo.domain.MemoRepository;
-import com.sparta.memo.domain.MemoRequestDto;
+import com.sparta.memo.dto.CheckPasswordDto;
+import com.sparta.memo.model.Memo;
+import com.sparta.memo.repository.MemoRepository;
+import com.sparta.memo.dto.MemoRequestDto;
 import com.sparta.memo.service.MemoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -43,7 +43,7 @@ public class MemoController {
         return id;
     }
 
-    //비밀번호 비교교
+    //비밀번호 비교
     @PostMapping("/api/memos/password")
     public Boolean comparePwd(@RequestBody CheckPasswordDto checkPasswordDto){
 
